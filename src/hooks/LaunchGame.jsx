@@ -32,7 +32,7 @@ const launchGame = (type_id, provider_id, game_id) => async (e) => {
 
     const data = await response.json();
     // console.log(data);
-    window.location.href = data.message.url;
+    window.location.href = data.Url;
     // window.open(data.Url, "_blank");
     console.log("Launch Game success");
   } catch (error) {
