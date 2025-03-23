@@ -12,6 +12,8 @@ const launchGame = (type_id, provider_id, game_id) => async (e) => {
     provider_id,
     game_id
   };
+  // console.log(inputData);
+  
 
   try {
     const response = await fetch(`${BASE_URL}/launch_game`, {
@@ -29,6 +31,7 @@ const launchGame = (type_id, provider_id, game_id) => async (e) => {
     }
 
     const data = await response.json();
+    // console.log(data);
     window.location.href = data.message.url;
     // window.open(data.Url, "_blank");
     console.log("Launch Game success");
